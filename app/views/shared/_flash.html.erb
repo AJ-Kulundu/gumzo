@@ -1,0 +1,8 @@
+<!-- BEGIN: /home/arnold/rails/gumzo/app/views/shared/_flash.html.erb -->
+<% flash.each do |key, value| %>
+    <div class="bg-gray-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
+        <p class="font-bold"><%= key.to_s.capitalize %></p>
+        <p><%= value %></p>
+    </div>
+<% end %>
+<!-- END: /home/arnold/rails/gumzo/app/views/shared/_flash.html.erb -->

@@ -8,7 +8,7 @@ module Authentication
     def sign_in(user)
         Current.user = user
         reset_session
-        cookie.encrypted[:user_id] = user.id
+        cookies.encrypted[:user_id] = user.id
     end
 
     def sign_out(user)
@@ -18,7 +18,7 @@ module Authentication
     end
 
     def authenticated_user!
-        redirect_to new_session_path, alert: "You must sign in" if current_user.blank?
+        redirect_to new_sessions_path, alert: "You need to sign in to continue" if current_user.blank?
     end
 
     def redirect_if_authenticated
