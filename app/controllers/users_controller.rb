@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authenticated_user!
-  before_action :redirect_if_authenticated
+  before_action :redirect_if_authenticated, only: %i[new]
   def new
     @user = User.new
   end

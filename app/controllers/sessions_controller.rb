@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     skip_before_action :authenticated_user!
-    
+    before_action :redirect_if_authenticated, only: %i[new]
     def new;end
 
     def create
