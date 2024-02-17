@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   resources :users, only: [:new, :create], path: "", path_names: {new: "sign_up"}
-  resources :sessions, only: [:new, :create, :destroy],path: "auth",path_names: {new: "sign_in", destroy: "sign_out"}
+  resources :sessions, only: [:new, :create, :destroy], path: "auth", path_names: {new: "sign_in", destroy: "sign_out"}
+  resources :chats
 end
