@@ -9,6 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        'notify':{
+          '0%': { opacity: '0' ,transform: 'translateY(-1.5rem)'},
+          '35%': { opacity: '1' ,transform: 'translateY(0px)'},
+          '100%':{opacity: '0'}
+        }
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
